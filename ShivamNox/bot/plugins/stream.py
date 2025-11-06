@@ -103,7 +103,7 @@ async def private_receive_handler(c: Client, m: Message):
         log_msg = await m.forward(chat_id=Var.BIN_CHANNEL)
         stream_link = f"http://hivajoy.fwh.is/watch/{str(log_msg.id)}?hash={get_hash(log_msg)}"
         online_link = f"http://hivajoy.fwh.is/dl/{str(log_msg.id)}?hash={get_hash(log_msg)}"
-        stream_link2 = f"https://filestreambot-pro-r2lr.onrender.com/watch/{str(log_msg.id)}?hash={get_hash(log_msg)}"
+        stream_link2 = f"https://filestreambot-pro-ikmw.onrender.com/watch/{str(log_msg.id)}?hash={get_hash(log_msg)}"
         
         msg_text = """<i><u>𝗬𝗼𝘂𝗿 𝗟𝗶𝗻𝗸 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗲𝗱 !</u></i>\n\n<b>📂 Fɪʟᴇ ɴᴀᴍᴇ :</b> <i>{}</i>\n\n<b>📦 Fɪʟᴇ ꜱɪᴢᴇ :</b> <i>{}</i>\n\n<b>📥 Dᴏᴡɴʟᴏᴀᴅ :</b> <i>{}</i>\n\n<b> 🖥WATCH  :</b> <i>{}</i>\n\n<b> 🖥Stream 2  :</b> <i>{}</i>\n\n<b>🚸 Nᴏᴛᴇ : LINK WILL NEVER EXPIRE</b>"""
         
@@ -155,7 +155,7 @@ async def channel_receive_handler(bot, broadcast):
         log_msg = await broadcast.forward(chat_id=Var.BIN_CHANNEL)
         stream_link = f"http://hivajoy.fwh.is/watch/{str(log_msg.id)}?hash={get_hash(log_msg)}"
         online_link = f"http://hivajoy.fwh.is/dl/{str(log_msg.id)}?hash={get_hash(log_msg)}"
-        stream_link2 = f"https://filestreambot-pro-r2lr.onrender.com/watch/{str(log_msg.id)}?hash={get_hash(log_msg)}"
+        stream_link2 = f"https://filestreambot-pro-ikmw.onrender.com/watch/{str(log_msg.id)}?hash={get_hash(log_msg)}"
         
         await log_msg.reply_text(
             text=f"**Channel Name:** `{broadcast.chat.title}`\n**CHANNEL ID:** `{broadcast.chat.id}`\n**Rᴇǫᴜᴇsᴛ ᴜʀʟ:** {stream_link}\n**Rᴇǫᴜᴇsᴛ ᴜʀʟ:** {stream_link2}",
